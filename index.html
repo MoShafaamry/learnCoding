@@ -3,78 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Website with Sidebar and Cards</title>
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
 
     <div class="container">
-        <div class="header">
-            <h1>[learnCoding]</h1>
-            <div class="content">
-                <h2>Welcome to learnCoding</h2>
-                <p>Learn how to code from the collection of study material and notes provided on this platform at no cost.</p>
-            </div>
-        </div>
-        
-        <!-- Navigation 
-        <div class="nav">
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <ul class="navbar-ul">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
-        </div>
-        -->
+        </aside>
 
-        <div class="mainsection">
-            <main class="maincontent">
-                <aside class="sidebar">
-                    <h2>Select Below</h2>
-                    <select id="dropdown" class="dropdown">
-                        <option value="javascript">JavaScript</option>
-                        <option value="python">Python</option>
-                        <option value="java">Java</option>
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                        <option value="react">React</option>
-                        <option value="angular">Angular</option>
-                        <option value="vue">Vue</option>
-                    </select>
-
-                    <div class="sidebar-cards">
-                        <div class="small-card">Coding Languages</div>
-                        <div class="small-card">Frameworks</div>
-                    </div>
-
-                    </section>
-                </aside>
-                <div class="card-container">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300" alt="Card Image">
-                        <h3>Card Title 1</h3>
-                        <p>This is a description for card 1. It provides some details about the content of the card.</p>
-                    </div>
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300" alt="Card Image">
-                        <h3>Card Title 2</h3>
-                        <p>This is a description for card 2. It provides some details about the content of the card.</p>
-                    </div>
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300" alt="Card Image">
-                        <h3>Card Title 3</h3>
-                        <p>This is a description for card 3. It provides some details about the content of the card.</p>
-                    </div>
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300" alt="Card Image">
-                        <h3>Card Title 4</h3>
-                        <p>This is a description for card 4. It provides some details about the content of the card.</p>
-                    </div>
-            </main>
-        </div>
-        <div class="footer">
-            <p>&copy; 2025 learnCoding</p>
-        </div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <h1>Website with Sidebar and Cards</h1>
+            </header>
+            <h1 style="color: white;">Main Content</h1>
+            <p class="main-content description">An open-source library of Coding Languages & Popular Frameworks.</p>
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <h3>Card 1</h3>
+                    <p>This is a sample description for Card 1.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <h3>Card 2</h3>
+                    <p>This is a sample description for Card 2.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <h3>Card 3</h3>
+                    <p>This is a sample description for Card 3.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="card">
+                    <h3>Card 4</h3>
+                    <p>This is a sample description for Card 4.</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </main>
     </div>
 </body>
 </html>
