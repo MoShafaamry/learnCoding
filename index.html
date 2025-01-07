@@ -3,62 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website with Sidebar and Cards</title>
+    <title>QuickSnip - Code Snippets</title>
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-bracket">{}</span>
+                <h1>learnCode</h1>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" placeholder="Search here...">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
 
-    <div class="container">
+            <div class="header-actions">
+                <button class="add-snippet-button">
+                    <span href="https://github.com/mrbigsticks/learnCoding" target="_blank">+</span> Add your snippet
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h2>Made to save your <span class="highlight">time</span></h2>
+        <p>Find code snippets in seconds, across multiple languages. Just search and copy!</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container main-content">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <h2>Sidebar</h2>
-            <ul class="navbar-ul">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <button class="category-button active">
+                <div class="language-tag">JS</div>
+                JAVASCRIPT
+            </button>
+            <div class="categories"></div>
         </aside>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <header class="header">
-                <nav class="navbar">
-                    <ul class="nav-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <h1>Website with Sidebar and Cards</h1>
-            </header>
-            <h1 style="color: white;">Main Content</h1>
-            <p class="main-content description">An open-source library of Coding Languages & Popular Frameworks.</p>
-            <div class="card-container">
-                <!-- Card 1 -->
-                <div class="card">
-                    <h3>Card 1</h3>
-                    <p>This is a sample description for Card 1.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="card">
-                    <h3>Card 2</h3>
-                    <p>This is a sample description for Card 2.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="card">
-                    <h3>Card 3</h3>
-                    <p>This is a sample description for Card 3.</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="card">
-                    <h3>Card 4</h3>
-                    <p>This is a sample description for Card 4.</p>
-                </div>
-                <!-- Add more cards as needed -->
+        <!-- Snippets Grid -->
+        <div class="content">
+            <h3>Learn Languages & Frameworks</h3>
+            <div class="snippets-grid"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>
+                <strong>QuickSnip</strong> is an open-source project that categorizes handy code
+                snippets across various programming languages.
+            </p>
+            <div class="footer-links">
+                <a href="#">Add your own snippet</a>
+                <a href="#">See the community</a>
             </div>
-        </main>
-    </div>
+        </div>
+    </footer>
+
+    <script src="src/script.js"></script>
 </body>
 </html>
