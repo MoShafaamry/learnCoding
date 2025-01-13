@@ -149,6 +149,10 @@ header {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    background-color: #0e0e0e;
+    border: 1px solid rgb(39, 39, 42);
+    border-radius: 0.5rem;
+    height: 40rem;
 }
 
 .category-button {
