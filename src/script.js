@@ -51,3 +51,10 @@ document.querySelectorAll('.category-button').forEach(button => {
         button.classList.add('active');
     });
 });
+
+
+// Function To Open New Tab For Useful Tools.
+
+function newTab() {
+    window.openNewTab("https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/", "_blank");
+}
