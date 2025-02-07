@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learnCode - Learn</title>
+    <link rel="stylesheet" href="/src/styles/searchPage.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="/index.html">
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-bracket">{ }</span>
+                <h1>learnCode</h1>
+            </div>
+        </a>
+            
+            <div class="search-container">
+                <input type="text" id="header-search" placeholder="Search here...">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+
+            <div class="header-actions">
+                <a class="add-snippet-button-atag" href="https://github.com/mrbigsticks/learnCoding" target="_blank">
+                <button class="add-snippet-button">
+                    <span>+</span> Add your notes
+                </button>
+                 </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h2>Made to help you <span class="highlight">study</span></h2>
+        <p>Find the language or framework you want to learn and access a free library of it with real world projects and study guides!</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <button class="category-button active">
+                <div class="language-tag">JS</div>
+                JavaScript
+            </button>
+            <button class="category-button active">
+                <div class="language-tag">P</div>
+                Python
+            </button>
+            <button class="category-button active">
+                <div class="language-tag">R</div>
+                React.js
+            </button>
+            <button class="category-button active">
+                <div class="language-tag">Vue</div>
+                Vue.js
+            </button>
+            <button class="category-button active">
+                <div class="language-tag">C</div>
+                C/ C++
+            </button>
+            <p class="category-title">Specific Functions</p>
+            <div class="categories"></div>
+        </aside>
+
+        <!-- Main Content Wrapper -->
+        <div class="content-wrapper">
+            <!-- Search Bar in Main Content -->
+            <div class="main-search-container">
+                <input type="text" id="main-search" placeholder="Search snippets...">
+            </div>
+
+            <!-- Card Grid -->
+            <div class="content">
+                <h3>Search for your tools:</h3>
+                <div class="snippets-grid">
+                    <div class="card" data-keywords="chatgpt ai openai language model" onclick="window.open('https://openai.com/chatgpt', '_blank')">
+                        <h4>ChatGPT</h4>
+                        <p>Explore AI capabilities with OpenAI's language model for various applications.</p>
+                    </div>
+                    <div class="card" data-keywords="next.js react server-side rendering ssg" onclick="window.open('https://nextjs.org/', '_blank')">
+                        <h4>Next.js</h4>
+                        <p>Build powerful React applications with server-side rendering and static site generation.</p>
+                    </div>
+                    <div class="card" data-keywords="vercel deployment hosting next.js" onclick="window.open('https://vercel.com/', '_blank')">
+                        <h4>Vercel</h4>
+                        <p>Deploy and host your Next.js and frontend applications with ease using Vercel.</p>
+                    </div>
+                    <div class="card" data-keywords="google gemini ai tools machine learning" onclick="window.open('https://deepmind.google/technologies/gemini/', '_blank')">
+                        <h4>Google Gemini</h4>
+                        <p>Utilize Google's AI tools and machine learning platforms for innovative projects.</p>
+                    </div>
+                    <div class="card" data-keywords="figma design prototyping collaboration ui ux" onclick="window.open('https://www.figma.com/', '_blank')">
+                        <h4>Figma</h4>
+                        <p>Collaborate on UI/UX design projects with Figma's powerful prototyping tools.</p>
+                    </div>
+                    <div class="card" data-keywords="azure cloud services microsoft platform" onclick="window.open('https://azure.microsoft.com/', '_blank')">
+                        <h4>Azure</h4>
+                        <p>Leverage Microsoft's cloud platform for building, testing, and deploying applications.</p>
+                    </div>
+                    <div class="card" data-keywords="acertinity ui framework design components" onclick="window.open('#', '_blank')">
+                        <h4>Acertinity UI</h4>
+                        <p>Create beautiful interfaces with Acertinity's UI framework and pre-built components.</p>
+                    </div>
+                    <div class="card" data-keywords="shadcn ui library react components" onclick="window.open('https://ui.shadcn.com/', '_blank')">
+                        <h4>Shadcn UI Library</h4>
+                        <p>Enhance your React applications with the versatile Shadcn UI component library.</p>
+                    </div>
+                    <div class="card" data-keywords="tubrolearn.ai ai education learning platform" onclick="window.open('#', '_blank')">
+                        <h4>Tubrolearn.ai</h4>
+                        <p>Revolutionize your learning with Tubrolearn's AI-powered educational tools.</p>
+                    </div>
+                </div>
+                <div class="grid-divider"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>
+                <strong>learnCode</strong> is an open-source project that categorizes handy code
+                snippets across various programming languages.
+            </p>
+            <div class="footer-links">
+                <a href="https://github.com/mrbigsticks/learnCoding">Add your own notes</a>
+                <a href="#">See the community</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('main-search').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.snippets-grid .card');
+
+            cards.forEach(card => {
+                const keywords = card.getAttribute('data-keywords').toLowerCase();
+                if (keywords.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
