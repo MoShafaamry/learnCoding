@@ -58,3 +58,23 @@ document.querySelectorAll('.category-button').forEach(button => {
 function newTab() {
     window.openNewTab("https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/", "_blank");
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('disclaimerPopup');
+    const acceptButton = document.getElementById('acceptButton');
+
+    function showPopup() {
+        popup.classList.remove('hidden');
+    }
+
+    function hidePopup() {
+        popup.classList.add('hidden');
+        localStorage.setItem('hasSeenDisclaimer', 'true');
+    }
+
+    if (!localStorage.getItem('hasSeenDisclaimer')) {
+        showPopup();
+    }
+
+    acceptButton.addEventListener('click', hidePopup);
+});
