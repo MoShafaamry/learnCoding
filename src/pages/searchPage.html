@@ -73,7 +73,7 @@
         <div class="content-wrapper">
             <!-- Search Bar in Main Content -->
             <div class="main-search-container">
-                <input type="text" id="main-search" placeholder="Search snippets...">
+                <input type="text" id="main-search" placeholder="Search tools...">
             </div>
 
             <!-- Card Grid -->
@@ -81,42 +81,78 @@
                 <h3>Search for your tools:</h3>
                 <div class="snippets-grid">
                     <div class="card" data-keywords="chatgpt ai openai language model" onclick="window.open('https://openai.com/chatgpt', '_blank')">
-                        <h4>ChatGPT</h4>
-                        <p>Explore AI capabilities with OpenAI's language model for various applications.</p>
+                        <img src="/src/images/chatgpticon.svg" alt="ChatGPT Icon">
+                        <div>
+                            <h4>ChatGPT</h4>
+                            <p>Explore AI capabilities with OpenAI's language model for various applications.</p>
+                        </div>
                     </div>
+                    
                     <div class="card" data-keywords="next.js react server-side rendering ssg" onclick="window.open('https://nextjs.org/', '_blank')">
-                        <h4>Next.js</h4>
-                        <p>Build powerful React applications with server-side rendering and static site generation.</p>
+                        <img src="/src/images/reacticon.svg" alt="Next.js Icon">
+                        <div>
+                            <h4>Next.js</h4>
+                            <p>Build powerful React applications with server-side rendering and static site generation.</p>
+                        </div>
                     </div>
+                    
                     <div class="card" data-keywords="vercel deployment hosting next.js" onclick="window.open('https://vercel.com/', '_blank')">
-                        <h4>Vercel</h4>
-                        <p>Deploy and host your Next.js and frontend applications with ease using Vercel.</p>
+                        <img src="/src/images/vercelicon.svg" alt="Vercel Icon">
+                        <div>
+                            <h4>Vercel</h4>
+                            <p>Deploy and host your Next.js and frontend applications with ease using Vercel.</p>
+                        </div>
                     </div>
+                    
                     <div class="card" data-keywords="google gemini ai tools machine learning" onclick="window.open('https://deepmind.google/technologies/gemini/', '_blank')">
-                        <h4>Google Gemini</h4>
-                        <p>Utilize Google's AI tools and machine learning platforms for innovative projects.</p>
+                        <img src="/path-to-gemini-icon.png" alt="Google Gemini Icon">
+                        <div>
+                            <h4>Google Gemini</h4>
+                            <p>Utilize Google's AI tools and machine learning platforms for innovative projects.</p>
+                        </div>
                     </div>
+                    
                     <div class="card" data-keywords="figma design prototyping collaboration ui ux" onclick="window.open('https://www.figma.com/', '_blank')">
-                        <h4>Figma</h4>
-                        <p>Collaborate on UI/UX design projects with Figma's powerful prototyping tools.</p>
+                        <img src="/src/images/figmaicon1.svg" alt="Figma Icon">
+                        <div>
+                            <h4>Figma</h4>
+                            <p>Collaborate on UI/UX design projects with Figma's powerful prototyping tools.</p>
+                        </div>
                     </div>
+                    
                     <div class="card" data-keywords="azure cloud services microsoft platform" onclick="window.open('https://azure.microsoft.com/', '_blank')">
-                        <h4>Azure</h4>
-                        <p>Leverage Microsoft's cloud platform for building, testing, and deploying applications.</p>
+                        <img src="/src/assets/azure.png" alt="Azure Icon">
+                        <div>
+                            <h4>Azure</h4>
+                            <p>Leverage Microsoft's cloud platform for building, testing, and deploying applications.</p>
+                        </div>
                     </div>
+                    
                     <div class="card" data-keywords="acertinity ui framework design components" onclick="window.open('#', '_blank')">
-                        <h4>Acertinity UI</h4>
-                        <p>Create beautiful interfaces with Acertinity's UI framework and pre-built components.</p>
+                        <img src="/path-to-acertinity-icon.png" alt="Acertinity UI Icon">
+                        <div>
+                            <h4>Acertinity UI</h4>
+                            <p>Create beautiful interfaces with Acertinity's UI framework and pre-built components.</p>
+                        </div>
                     </div>
+                    
                     <div class="card" data-keywords="shadcn ui library react components" onclick="window.open('https://ui.shadcn.com/', '_blank')">
-                        <h4>Shadcn UI Library</h4>
-                        <p>Enhance your React applications with the versatile Shadcn UI component library.</p>
+                        <img src="/src/images/shadcnui.svg" alt="Shadcn UI Icon">
+                        <div>
+                            <h4>Shadcn UI Library</h4>
+                            <p>Enhance your React applications with the versatile Shadcn UI component library.</p>
+                        </div>
                     </div>
+                    
                     <div class="card" data-keywords="tubrolearn.ai ai education learning platform" onclick="window.open('https://www.turbolearn.ai/', '_blank')">
-                        <h4>Tubrolearn.ai</h4>
-                        <p>Revolutionize your learning with Tubrolearn's AI-powered educational tools.</p>
+                        <img src="/path-to-tubrolearn-icon.png" alt="Tubrolearn.ai Icon">
+                        <div>
+                            <h4>Tubrolearn.ai</h4>
+                            <p>Revolutionize your learning with Tubrolearn's AI-powered educational tools.</p>
+                        </div>
                     </div>
                 </div>
+                <button id="show-more-btn" class="search-tool-button">Show More</button>
                 <div class="grid-divider"></div>
             </div>
         </div>
@@ -148,6 +184,36 @@
                 } else {
                     card.style.display = 'none';
                 }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.snippets-grid .card');
+            const showMoreBtn = document.getElementById('show-more-btn');
+            const cardsPerPage = 6;
+            let isShowingAll = false;
+
+            cards.forEach((card, index) => {
+                if (index >= cardsPerPage) {
+                    card.style.display = 'none';
+                }
+            });
+
+            showMoreBtn.addEventListener('click', function() {
+                if (!isShowingAll) {
+                    cards.forEach(card => {
+                        card.style.display = 'block';
+                    });
+                    showMoreBtn.textContent = 'Show Less';
+                } else {
+                    cards.forEach((card, index) => {
+                        if (index >= cardsPerPage) {
+                            card.style.display = 'none';
+                        }
+                    });
+                    showMoreBtn.textContent = 'Show More';
+                }
+                isShowingAll = !isShowingAll;
             });
         });
     </script>

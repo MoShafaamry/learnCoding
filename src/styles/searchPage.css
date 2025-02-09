@@ -173,13 +173,13 @@ header {
 }
 
 .main-search-container {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     text-align: center;
 }
 
 .main-search-container input {
     width: 100%;
-    padding: 0.5rem 0.75rem 0.5rem 2rem;
+    padding: 0.6rem 0.8rem 0.5rem 2rem;
     background-color: rgb(24, 24, 27);
     border: 1.5px solid rgb(39, 39, 42);
     border-radius: 0.375rem;
@@ -201,6 +201,8 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .card:hover {
@@ -210,11 +212,20 @@ header {
 .card h4 {
     margin-bottom: 10px;
     font-size: 18px;
+    color: #ffffff;
 }
 
 .card p {
     font-size: 14px;
     color: #adadad;
+}
+
+.card img {
+    border: 1px solid rgb(39, 39, 42);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.375rem;
+    margin-right: 1rem;
 }
 
 
@@ -336,27 +347,6 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 
-/* Unique backgrounds */
-.html-card {
-    background-image: url('./images/learnCodeImage.jpg');
-}
-
-.vision-card {
-    background-image: url('./images/vision.svg');
-}
-
-.css-card {
-    background-image: url('./images/learnCodeImage2.jpg');
-}
-
-.js-card {
-    background-image: url('./images/learnCodeImage3.jpg');
-}
-
-.react-card {
-    background-image: url('src/images/react-card.jpg');
-}
-
 
 .grid-divider {
     border-top: 1px solid rgb(39, 39, 42);
@@ -387,81 +377,26 @@ header {
     width: 6rem;
     border-radius: 0.5rem;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
-
 .tool-icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 0.375rem;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
     font-family: monospace;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 1;
 }
 
-.grid-item1 {
-    background-image: url('/src/images/tailwindsicon.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 
-/* Hover effect for grid items ADD LATER
-.grid-item1:hover {
-    box-shadow: 0 4px 10px rgba(14, 109, 156, 0.7);
-    transition: box-shadow 0.4s ease-in-out;
-} */
-
-.grid-item2 {
-    background-image: url('/src/images/reacticon.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.grid-item3 {
-    background-image: url('/src/images/javascripticon.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.grid-item4 {
-    background-image: url('/src/images/figmaicon1.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.grid-item5 {
-    background-image: url('/src/images/shadcnui.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.grid-item6 {
-    background-image: url('/src/images/v0.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.grid-item7 {
-    background-image: url('/src/images/vercelicon.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.grid-item8 {
-    background-image: url('/src/images/chatgpticon.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 
 /* Footer styles */
 footer {
@@ -519,4 +454,10 @@ footer {
     .footer-links {
         justify-content: center;
     }
+}
+
+#show-more-btn {
+    margin: 2rem auto;
+    display: block;
+    min-width: 120px;
 }
