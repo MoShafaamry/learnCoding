@@ -12,11 +12,11 @@ const categories = [
 ];
 
 const snippets = [
-    "Partition Array",
-    "Remove Duplicates",
-    "Remove Falsy Values",
-    "Shuffle Array",
-    "Zip Arrays"
+    "Bash Scripting",
+    "Nmap",
+    "Linux",
+    "Wireshark",
+    "DDoS Attack"
 ];
 
 // Populate categories
@@ -34,7 +34,7 @@ snippets.forEach(snippet => {
     const div = document.createElement('div');
     div.className = 'snippet-card';
     div.innerHTML = `
-        <div class="snippet-icon">JS</div>
+        <div class="snippet-icon"><></div>
         <h4>${snippet}</h4>
     `;
     snippetsGrid.appendChild(div);
