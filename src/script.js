@@ -12,11 +12,11 @@ const categories = [
 ];
 
 const snippets = [
-    "Bash Scripting",
-    "Nmap",
-    "Linux",
-    "Wireshark",
-    "DDoS Attack"
+    "Partition Array",
+    "Remove Duplicates",
+    "Remove Falsy Values",
+    "Shuffle Array",
+    "Zip Arrays"
 ];
 
 // Populate categories
@@ -34,7 +34,7 @@ snippets.forEach(snippet => {
     const div = document.createElement('div');
     div.className = 'snippet-card';
     div.innerHTML = `
-        <div class="snippet-icon"><></div>
+        <div class="snippet-icon">JS</div>
         <h4>${snippet}</h4>
     `;
     snippetsGrid.appendChild(div);
@@ -53,28 +53,8 @@ document.querySelectorAll('.category-button').forEach(button => {
 });
 
 
-// Function To Open New Tab For Useful Tools.
-
-function newTab() {
-    window.openNewTab("https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/", "_blank");
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    const popup = document.getElementById('disclaimerPopup');
-    const acceptButton = document.getElementById('acceptButton');
-
-    function showPopup() {
-        popup.classList.remove('hidden');
-    }
-
-    function hidePopup() {
-        popup.classList.add('hidden');
-        localStorage.setItem('hasSeenDisclaimer', 'true');
-    }
-
-    if (!localStorage.getItem('hasSeenDisclaimer')) {
-        showPopup();
-    }
-
-    acceptButton.addEventListener('click', hidePopup);
-});
+function myNumber(num) {
+    return num - 3;
+  }
+    console.log(myNumber(3));
+  
