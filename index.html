@@ -174,5 +174,23 @@
     </footer>
 
     <script src="src/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const acceptButton = document.getElementById('acceptButton');
+            const popup = document.getElementById('disclaimerPopup');
+
+            // Check if the user has already accepted the terms
+            if (localStorage.getItem('termsAccepted') === 'true') {
+                popup.style.display = 'none';
+            }
+
+            acceptButton.addEventListener('click', () => {
+                // Hide the popup
+                popup.style.display = 'none';
+                // Store the acceptance in localStorage
+                localStorage.setItem('termsAccepted', 'true');
+            });
+        });
+    </script>
 </body>
 </html>
