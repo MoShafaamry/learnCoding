@@ -1,10 +1,10 @@
 // Data
 const categories = [
-    "Array Manipulation",
-    "Basics",
-    "Date And Time",
-    "Dom Manipulation",
-    "Function Utilities",
+    "Nmap",
+    "Wireshark",
+    "Metasploit Framework",
+    "SecurityTrails",
+    "Shodan Search",
     "Local Storage",
     "Number Formatting",
     "Object Manipulation",
