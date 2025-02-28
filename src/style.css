@@ -332,6 +332,10 @@ header {
     background-image: url('./images/learnCodeImage.jpg');
 }
 
+.SecTools {
+    background-image: url('./images/SecTools.png');
+}
+
 .vision-card {
     background-image: url('./images/vision.svg');
 }
